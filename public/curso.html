@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=EX4NVIeemm-AQiBi3tOZkjiiO4OCwvY1JmJF3p-VEY3fIt9HIHk-HjJ32xpUCKIZmvCDkbPO2iwpKvjauNyfu9861mD2OM5nTq7rBPS5TKcIN40iRvxIUjcSHlUb0HRV2PKcZ3ZbTFCA3K6iTypjee_RN2h_CqwxTuLucSHaGadE7MEztwRPfQMYRmAlDkJ-H0PsBIZZJHskaOMjSxopDxkyWaPQRZwYFeh5HR7Qq-Bu2NCkU5eclKAM3pvHz_bnKVA2wTeDaolli-fzdCw92Q" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvMTI4ODkyNDM1MDQ4MDkxMjQ2MC8xMzA1Nzc4NDk0NTc5NTM5OTc4L3RlbGFfY3Vyc29zLmh0bWw_ZXg9NjczNGVkM2QmaXM9NjczMzliYmQmaG09YjU4YmVlYzY4MTk2MDA1ZjUxYmJiYzQ0ZWQ5OGRjNzRjNzU4NmMzZTBlY2U4YTVlODk4OGRjNGU2M2Y3Y2FhZCY"/><script src="https://cdn.tailwindcss.com"></script>
+    <title>Página de Cursos</title>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Cabeçalho -->
+    <nav class="bg-[#ACC7EA] p-4 md:p-2 flex justify-between items-center">
+        <div class="flex justify-between items-center">
+            <!-- Envolvendo a imagem da logo com um link -->
+            <a href="/index.html" aria-label="Voltar para a página inicial">
+                <img src="assets/Logo.png" width="40" height="40" alt="Logo MindSpark"> <!-- Logo -->
+            </a>
+            <h1 class="ml-2 font-bold text-sm md:text-lg lg:text-xl">MindSpark</h1>
+        </div>
+    
+        <div class="navbar text-sm md:text-base">
+            <a class="mr-2 text-black hover:text-gray-500" href="/suporte" aria-label="Navegar para Suporte">Suporte</a>
+            <a class="mr-2 text-black hover:text-gray-500" href="/ticket" aria-label="Navegar para Ticket">Dúvidas</a>
+            <a class="mx-2 text-black hover:text-gray-500" href="/home" aria-label="Navegar para o inicio">Menu</a>
+        </div>
+    </nav>
+    
+    <!-- Linha separadora após o cabeçalho -->
+    <hr class="border-t-2 border-black mt-0 mb-4">
+
+    <!-- Curso em Destaque -->
+    <div class="text-center mt-10">
+        <h2 class="text-2xl font-semibold mb-4">Curso em Destaque</h2>
+        <hr class="border-t-2 border-black w-1/4 mx-auto mb-6">
+        
+        <!-- Carrossel de Cursos -->
+        <div class="relative w-full max-w-4xl mx-auto">
+            <div class="flex space-x-6 overflow-x-auto py-4 scrollbar-hide">
+                <!-- Curso 3 - Link para página de curso -->
+                <a href="curso1.html" class="flex-none w-60 h-40 bg-gray-200 rounded-lg border-2 border-blue-500 transition-transform transform hover:scale-105 md:w-80 lg:w-96">
+                    <img src="assets/informatica.jpg" alt="Curso 1" class="w-full h-full object-cover rounded-lg">
+                </a>
+                <!-- Curso 4 - Link para página de curso -->
+                <a href="curso2.html" class="flex-none w-60 h-40 bg-gray-200 rounded-lg border-2 border-blue-500 transition-transform transform hover:scale-105 md:w-80 lg:w-96">
+                    <img src="assets/espanhol.jpg" alt="Curso 2" class="w-full h-full object-cover rounded-lg">
+                </a>
+                <!-- Curso 5 - Link para página de curso -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Linha preta separando o carrossel -->
+    <hr class="border-t-2 border-black mt-8 mb-4">
+
+    <!-- Como usar o site -->
+    <div class="text-center mt-10">
+        <h3 class="text-xl font-semibold mb-4">Como usar o site?</h3>
+        <p class="text-lg mb-4">Assista ao vídeo abaixo para aprender como navegar no site e acessar os cursos.</p>
+        
+        <!-- Vídeo -->
+        <div class="max-w-6xl mx-auto mb-16">
+            <iframe class="w-full h-80" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Linha preta separando o rodapé do conteúdo -->
+    <hr class="border-t-2 border-black mt-10 mb--0">
+
+    <!-- Rodapé -->
+    <footer class="bg-[#ACC7EA] p-4 flex justify-between items-center text-white">
+        <p class="text-sm text-black">© Todos os direitos reservados</p>
+        <div class="flex gap-2 sm:gap-4">
+            <a href="https://www.instagram.com/MindSpark" target="_blank" aria-label="Instagram" class="text-white hover:text-gray-400">
+                <img src="assets/Instagram.png" alt="Instagram" class="w-6 h-6">
+            </a>
+
+            <a href="https://wa.me/55seunumerodetelefone" target="_blank" aria-label="WhatsApp" class="text-white hover:text-gray-400">
+                <img src="assets/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

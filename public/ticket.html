@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSpark - Sistema de Tickets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                mindspark: '#ACC7EA',
+                darkmode: '#5b4e68',
+                lightmode: '#f2f1f3',
+              }
+            }
+          }
+        }
+    </script>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+        .num { font-family: 'Arial', sans-serif; }
+        body { background-color: #BABABA; }
+        footer p { margin-right: 10px; }
+        footer img { width: 24px; height: 24px; cursor: pointer; }
+        .content { margin-bottom: 50px; }
+        .image-container { position: relative; width: 100%; overflow: hidden; }
+        .image-container img { width: 100%; height: auto; }
+        .image-text {
+            position: absolute;
+            top: 6.5%; left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1rem; text-align: center; width: 100%;
+            z-index: 10; box-sizing: border-box;
+        }
+        .form-container {
+            padding: 20px; background-color: #f2f1f3;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px; max-width: 700px;
+            margin: -30px auto 0; width: 100%;
+        }
+        nav { border-bottom: 2px solid black; }
+        footer { border-top: 2px solid black; }
+    </style>
+</head>
+<body>
+    <nav class="bg-mindspark p-2 flex justify-between items-center m-0">
+        <div class="flex items-center">
+            <a href="/index.html">
+                <img src="assets/Logo.png" alt="Logo MindSpark" width="40" height="40"> <!-- Logo -->
+            </a>
+            <h1 class="ml-2 font-bold text-sm md:text-lg">MindSpark</h1>
+        </div>
+        <div class="navbar text-sm md:text-base">
+            <a class="mr-2 text-black hover:text-gray-500" href="/suporte" aria-label="Navegar para suporte">Suporte</a>
+            <a class="mx-2 text-black hover:text-gray-500" href="/curso" aria-label="Navegar para curso">Curso</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="relative flex flex-col items-center mt-10 max-w-xl mx-auto px-4">
+            <div class="image-container">
+                <img src="assets/ticket.png" alt="Imagem Descrição" class="w-full h-auto mt-6">
+                <div class="image-text">
+                    <p class="text-white text-xl md:text-2xl font-bold">Precisa de ajuda? Abra um ticket!</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <form id="ticket-form" enctype="multipart/form-data" action="/enviar-ticket" method="POST" class="bg-lightmode p-6 rounded-lg shadow-lg w-full">
+                    <label for="name" class="block mb-2">Nome:</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Digite seu nome" required>
+
+                    <label for="email" class="block mb-2">E-mail:</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Digite seu e-mail" required>
+
+                    <label for="celular" class="block mb-2">Celular:</label>
+                    <input type="tel" id="celular" name="celular" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Digite seu celular" required>
+
+                    <label for="role" class="block mb-2">Nome do Professor:</label>
+                    <select id="role" name="role" class="w-full p-2 mb-4 border border-gray-300 rounded" required>
+                        <option value="" disabled selected>Selecione o professor</option>
+                    </select>
+
+                    <label for="duvida" class="block mb-2">Digite sua dúvida:</label>
+                    <textarea id="duvida" name="duvida" rows="4" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Descreva sua dúvida" required></textarea>
+
+                    <label for="photo" class="block mb-2">Anexar imagem:</label>
+                    <input type="file" id="photo" name="photo" class="w-full p-2 mb-4 border border-gray-300 rounded" accept="image/*">
+
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Enviar Ticket</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-mindspark p-2 flex justify-start items-center gap-4 self-baseline">
+        <p class="text-black hover:text-gray-500 text-sm md:text-base">(c) Todos os direitos reservados</p>
+        <div class="flex gap-4 ml-auto">
+            <a href="https://www.instagram.com/MindSpark" target="_blank" aria-label="Instagram" class="text-black hover:text-gray-500">
+                <img src="assets/Instagram.png" alt="Instagram" class="w-6 h-6">
+            </a>
+            <a href="https://wa.me/55seunumerodetelefone" target="_blank" aria-label="WhatsApp" class="text-black hover:text-gray-500">
+                <img src="assets/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        async function carregarProfessores() {
+            try {
+                const response = await fetch('/professores');
+                const professores = await response.json();
+                const select = document.getElementById('role');
+                professores.forEach(prof => {
+                    const option = document.createElement('option');
+                    option.value = prof.id;
+                    option.textContent = prof.nome;
+                    select.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar professores:', error);
+            }
+        }
+    
+        carregarProfessores();
+
+        document.getElementById('ticket-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('/enviar-ticket', {
+                    method: 'POST',
+                    body: formData
+                });
+                if (response.ok) {
+                    const result = await response.json();
+                    alert(result.message);
+                    form.reset();
+                } else {
+                    alert('Erro ao enviar o ticket.');
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao enviar o ticket.');
+            }
+        });
+    </script>
+</body>
+</html>

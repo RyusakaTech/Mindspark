@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>MindSpark - Aulas</title>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100">
+
+    <!-- Cabeçalho -->
+    <nav class="bg-[#ACC7EA] p-4 md:p-2 flex justify-between items-center">
+        <div class="flex justify-between items-center">
+            <a href="/index.html">
+                <img src="assets/Logo.png" alt="Logo MindSpark" width="40" height="40"> <!-- Logo -->
+            </a>
+            <h1 class="ml-2 font-bold text-sm md:text-lg lg:text-xl">MindSpark</h1>
+        </div>
+
+        <div class="navbar text-sm md:text-base">
+            <a class="mr-2 text-black hover:text-gray-500" href="/suporte" aria-label="Navegar para suporte">Suporte</a>
+            <a class="mx-2 text-black hover:text-gray-500" href="/curso" aria-label="Navegar para curso">Curso</a>
+            <a class="mx-2 text-black hover:text-gray-500" href="/home" aria-label="Navegar para o inicio">Menu</a>
+        </div>
+    </nav>
+
+    <!-- Linha separadora após o cabeçalho -->
+    <hr class="border-t-2 border-black mt-0 mb-4">
+
+    <!-- Área de conteúdo da aula -->
+    <div class="p-8 bg-white">
+
+        <!-- Vídeo da aula -->
+        <div class="mb-8">
+            <h2 id="lesson-title" class="text-2xl font-bold text-center mb-8">Título da Aula: [Aula do Professor]</h2>
+            <div id="video1" class="video-section mb-12">
+                <iframe id="video-frame" class="w-full h-80 rounded-lg shadow-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Barra de progresso -->
+        <div class="mb-6">
+            <p class="font-semibold text-lg mb-2">Progresso do Curso:</p>
+            <div class="relative pt-1">
+                <div class="flex mb-2 items-center justify-between">
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-teal-600">
+                        <span id="progress-text">0%</span>
+                    </span>
+                </div>
+                <div class="flex mb-2">
+                    <div class="relative w-full">
+                        <div class="flex mb-2">
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div id="progress-bar" class="bg-teal-600 h-2.5 rounded-full" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sistema de Módulos -->
+        <div class="bg-[#ACC7EA] shadow-lg p-6 mb-12">
+            <h2 class="font-bold text-lg mb-6 text-white">Módulos</h2>
+            <!-- Navegação de Módulos -->
+            <ul class="space-y-4">
+                <!-- Módulo 1 -->
+                <li>
+                    <button onclick="toggleModule('module1')" class="block w-full text-left py-2 px-4 text-gray-700 hover:bg-blue-600 hover:text-white rounded-lg">Módulo 1: Fundamentos da Informática</button>
+                    <div id="module1" class="hidden pl-4 space-y-2">
+                        <a href="#" class="block text-gray-600 hover:text-blue-600" onclick="carregarConteudo(4, 11)">Capítulo 1: Introdução à Informática</a>
+                        <a href="#" class="block text-gray-600 hover:text-blue-600" onclick="carregarConteudo(5, 22)">Capítulo 2: Principais Componentes de um Computador</a>
+                        <a href="#" class="block text-gray-600 hover:text-blue-600" onclick="carregarConteudo(6, 33)">Capítulo 3: Sistemas Operacionais Básicos</a>
+                    </div>
+                </li>
+                <!-- Módulo 2 -->
+                <li>
+                    <button onclick="toggleModule('module2')" class="block w-full text-left py-2 px-4 text-gray-700 hover:bg-blue-600 hover:text-white rounded-lg">Módulo 2: Ferramentas de Produtividade</button>
+                    <div id="module2" class="hidden pl-4 space-y-2">
+                        <a href="#" class="block text-gray-600 hover:text-blue-600" onclick="carregarConteudo(7, 44)">Capítulo 1: Uso do Processador de Textos</a>
+                        <a href="#" class="block text-gray-600 hover:text-blue-600" onclick="carregarConteudo(8, 55)">Capítulo 2: Planilhas Eletrônicas Essenciais</a>
+                        <a href="#" class="block text-gray-600 hover:text-blue-600" onclick="carregarConteudo(9, 66)">Capítulo 3: Apresentações de Impacto</a>
+                    </div>
+                </li>
+                <!-- Módulo 3 -->
+                <li>
+                    <button onclick="toggleModule('module3')" class="block w-full text-left py-2 px-4 text-gray-700 hover:bg-blue-600 hover:text-white rounded-lg">Módulo 3: Internet e Segurança</button>
+                    <div id="module3" class="hidden pl-4 space-y-2">
+                        <a href="#" class="block text-gray-600 hover:text-blue-600" onclick="carregarConteudo(10, 77)">Capítulo 1: Navegação na Internet</a>
+                        <a href="#" class="block text-gray-600 hover:text-blue-600" onclick="carregarConteudo(11, 88)">Capítulo 2: Redes Sociais e Comunicação Online</a>
+                        <a href="#" class="block text-gray-600 hover:text-blue-600" onclick="carregarConteudo(12, 100)">Capítulo 3: Segurança Digital e Privacidade</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+            <!-- Mensagem de conclusão e botão -->
+        <div id="completion-section" class="hidden text-center mt-12">
+            <p id="motivational-message" class="text-xl font-bold text-green-700 mb-4">Parabéns! Você completou o curso!</p>
+            <a href="https://drive.google.com/file/d/127SdjQcLfXrCkX-0QSx6g_5K3LPjvki5/preview" target="_blank">
+                <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                    Baixar Certificado
+                </button>
+            </a>
+            </div>
+        </div>
+
+    <!-- Linha preta separando o rodapé -->
+    <hr class="border-t-2 border-black mt-10 mb-4">
+
+    <!-- Rodapé -->
+    <footer class="bg-[#ACC7EA] p-4 text-center text-sm text-black">
+        <p>&copy; 2024 MindSpark - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Atualiza a barra de progresso
+        function updateProgress(progress) {
+            const progressBar = document.getElementById("progress-bar");
+            const progressText = document.getElementById("progress-text");
+            progressBar.style.width = progress + "%";
+            progressText.innerText = progress + "%";
+    
+            // Verifica se o progresso chegou a 100% e exibe a mensagem de conclusão
+            if (progress === 100) {
+                showCompletionMessage();
+            }
+        }
+    
+        function showCompletionMessage() {
+            const completionSection = document.getElementById("completion-section");
+            completionSection.classList.remove("hidden");
+        }
+        
+        // Exibe/oculta os módulos
+        function toggleModule(moduleId) {
+            const module = document.getElementById(moduleId);
+            module.classList.toggle("hidden");
+        }
+    
+        // Atualiza o vídeo e a barra de progresso
+        function carregarConteudo(videoId, progress) {
+            updateProgress(progress);
+    
+            fetch(`/video/${videoId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao carregar o vídeo');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const videoFrame = document.getElementById('video-frame');
+                    videoFrame.src = data.link; // Atualiza o link do vídeo no iframe
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                });
+        }
+    </script>
+    
+</body>
+</html>

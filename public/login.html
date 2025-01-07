@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=swPcyfEQFbeW8jQTDwGJGxir04FkM15b7_Ss5RMEsm9GWnBXlaFor-tniLT9jqKRMzWs9jbxAd1NDu9qfDxD4_dWulRqvMsDhP3ddq32u7l6zw0RPfE2tLzO8t15nm6ACPkaz7YDjaNznvVvnPDL9y9nlHQXlvb89zFikdCTSyu5kocrKNucQe3OB6yRdEH-ItJnqKvbtJN4T4OJr7uoM6lsVHee0rfYQoKdFG9y1SJQC6vkgnpOCCuxdzD7dlAhpx0tyUjqM8clDeCvDnMwAw" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvMTI4ODkyNDM1MDk4NDIyNDgzMS8xMzA3MDQ0MzYxMjYyODU4MzAxL2xvZ2luLmh0bWw_ZXg9NjczYzJiMmImaXM9NjczYWQ5YWImaG09OWEyN2E1ZWYwZThlMDJhNDc3YzdiN2Y4YjI2Y2I5YjhhY2JiM2IzYTA3NWJkY2I3MTc3OTExMWY4NWZjNTlkNyY"/><script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=BgyxE3oTPCkfEO7A6-tWpQaNTXwT4Ig9kUQEusyZvXiTszkeIGav1YU4UUyiWXOmOQDEApUFmztfD8MJTdhot-aLEk6JSzvYvih6ed0_Ee0NhPf1-yVxQLZHgd4pF2j7S5mYdUc9POENoU95-MWRNm6Z-ANU3WR98GAeoBq1N6OCVa7DkL39JzxO2smlSxDODfD0JImTUxkh_2jATMj_BIBfv3jmaRVVV_3NJn5r92UfLx94K5UPCIZ9Ckvg13GbEvczX2hcyYy8qgzHYC5Uwg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvMTI5MzI2MjI2NjMwNDY5NjQ2Mi8xMzA1NTUxNjE1NjM3MzI3ODkyL2xvZ2luLmh0bWw_ZXg9NjczMzcxMzEmaXM9NjczMjFmYjEmaG09ODZmZjhhM2U1MjE1Y2MxMjAxNDRhOTQ2ZWY5NzMyNmZhZGExMzg5MWEzMDg5YmRiOGNjODA1YjBhNzQwNDM4MiY"/><script src="script.js" defer></script> <!-- Certifique-se de que o caminho do arquivo está correto -->
+    <title>MindSpark</title>
+    <!--
+    <link rel="stylesheet" href="inicial.css">
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                mindspark: '#ACC7EA',
+                darkmode: '#5b4e68',
+                lightmode: '#f2f1f3',
+              }
+            }
+          }
+        }
+
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+        .num {
+            font-family: 'Arial', sans-serif; /* Fonte para números */
+        }
+    </style>
+</head>
+<body>
+
+    <!--///////////-->
+    <!-- CABEÇALHO -->
+    <!--///////////-->
+    <nav class="bg-mindspark p-2 flex justify-between items-center m-0">
+        <div class="flex justify-between items-center">
+            <a href="/index.html">
+                <img src="assets/Logo.png" alt="Logo MindSpark" width="40" height="40"> <!-- Logo -->
+            </a>
+            <h1 class="ml-2 font-bold">MindSpark</h1>
+        </div>
+
+        <div class="navbar">
+            <a class="mr-2" href="/suporte">Suporte</a>
+            <a class="mx-2" href="/curso">Curso</a>
+            <a class="mx-2 text-black hover:text-gray-500" href="/home" aria-label="Navegar para o inicio">Menu</a>
+        </div>
+    </nav>
+
+    <!--centralizar conteúdo-->
+    <div class="flex flex-col items-center h-[90vh] place-content-center m-0">
+    <!--////////////////////-->
+    <!-- FRASE MOTIVACIONAL -->
+    <!--////////////////////-->
+    <div class="bg-darkmode text-white text-center p-8 m-4 rounded-xl outline">
+        <p>"Faça Login ou Cadastre-se para ter acesso ao site completo!"</p>
+    </div>
+
+    <!--/////////////////////-->
+    <!-- FORMULÁRIO DE LOGIN -->
+    <!--/////////////////////-->
+    <section class="p-5 py-8 flex flex-col w-[40%]">
+        <form id="loginForm">
+            <label for="">Email:</label>
+            <input class="h-10 w-full mb-4 rounded-lg outline ring ring-offset-2 ring-1 outline-1 p-3 items-center" type="text"><br>
+            
+            <label for="">Senha:</label>
+            <input class="h-10 w-full mb-4 rounded-lg outline ring ring-offset-2 ring-1 outline-1 p-3 items-center" type="password"><br><br>
+    
+            <div class="flex justify-center space-x">
+                <button i="audio" class="bg-mindspark m-auto py-2 px-6 rounded-xl outline outline-1 ring ring-2 ring-offset-2">
+                    Entrar
+                </button>
+                
+                <button id="cadastrobtn" class="bg-mindspark m-auto py-2 px-6 rounded-xl outline outline-1 ring ring-2 ring-offset-2">
+                    Cadastre-se
+                </button>
+            </div>
+        </form>
+    
+        <div id="message"></div> <!-- Mensagem de erro -->
+    </section>
+      
+    <!--////////////////////-->
+    <!-- FRASE MOTIVACIONAL -->
+    <!--////////////////////-->
+    <div class="bg-lightmode text-black outline text-center p-8 m-4 rounded-xl">
+        <p>"O primeiro passo para o sucesso é acreditar em si mesmo."</p>
+    </div>
+    </div>
+
+    <!--////////-->
+    <!-- RODAPÉ -->
+    <!--////////-->
+    <footer class="bg-mindspark p-2 flex justify-end items-center gap-2 self-baseline">
+        <p>(c) Todos os direitos reservados</p>
+
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 0C7.28333 0 6.94417 0.0125 5.8775 0.06C4.8125 0.11 4.0875 0.2775 3.45 0.525C2.7925 0.78 2.23417 1.1225 1.67833 1.67833C1.1225 2.23417 0.779167 2.79167 0.525 3.45C0.2775 4.0875 0.109167 4.8125 0.06 5.8775C0.01 6.94417 0 7.28333 0 10C0 12.7167 0.0125 13.0558 0.06 14.1225C0.11 15.1867 0.2775 15.9125 0.525 16.55C0.78 17.2067 1.1225 17.7658 1.67833 18.3217C2.23417 18.8767 2.79167 19.2208 3.45 19.475C4.08833 19.7217 4.81333 19.8908 5.8775 19.94C6.94417 19.99 7.28333 20 10 20C12.7167 20 13.0558 19.9875 14.1225 19.94C15.1867 19.89 15.9125 19.7217 16.55 19.475C17.2067 19.22 17.7658 18.8767 18.3217 18.3217C18.8767 17.7658 19.2208 17.2092 19.475 16.55C19.7217 15.9125 19.8908 15.1867 19.94 14.1225C19.99 13.0558 20 12.7167 20 10C20 7.28333 19.9875 6.94417 19.94 5.8775C19.89 4.81333 19.7217 4.08667 19.475 3.45C19.22 2.7925 18.8767 2.23417 18.3217 1.67833C17.7658 1.1225 17.2092 0.779167 16.55 0.525C15.9125 0.2775 15.1867 0.109167 14.1225 0.06C13.0558 0.01 12.7167 0 10 0ZM10 1.8C12.6692 1.8 12.9875 1.81333 14.0417 1.85917C15.0167 1.905 15.5458 2.06667 15.8975 2.205C16.3658 2.38583 16.6975 2.6025 17.0492 2.95167C17.3983 3.30167 17.615 3.63417 17.7958 4.1025C17.9325 4.45417 18.0958 4.98333 18.14 5.95833C18.1875 7.01333 18.1983 7.33 18.1983 10C18.1983 12.67 18.1858 12.9875 18.1367 14.0417C18.0858 15.0167 17.9233 15.5458 17.7858 15.8975C17.5992 16.3658 17.3867 16.6975 17.0367 17.0492C16.6875 17.3983 16.35 17.615 15.8867 17.7958C15.5367 17.9325 14.9992 18.0958 14.0242 18.14C12.9625 18.1875 12.65 18.1983 9.975 18.1983C7.29917 18.1983 6.98667 18.1858 5.92583 18.1367C4.95 18.0858 4.4125 17.9233 4.0625 17.7858C3.58833 17.5992 3.2625 17.3867 2.91333 17.0367C2.5625 16.6875 2.33833 16.35 2.16333 15.8867C2.02583 15.5367 1.86417 14.9992 1.81333 14.0242C1.77583 12.9742 1.7625 12.65 1.7625 9.9875C1.7625 7.32417 1.77583 6.99917 1.81333 5.93667C1.86417 4.96167 2.02583 4.425 2.16333 4.075C2.33833 3.6 2.5625 3.275 2.91333 2.92417C3.2625 2.575 3.58833 2.35 4.0625 2.17583C4.4125 2.0375 4.93833 1.875 5.91333 1.825C6.97583 1.7875 7.28833 1.775 9.9625 1.775L10 1.8ZM10 4.865C7.1625 4.865 4.865 7.165 4.865 10C4.865 12.8375 7.165 15.135 10 15.135C12.8375 15.135 15.135 12.835 15.135 10C15.135 7.1625 12.835 4.865 10 4.865ZM10 13.3333C8.15833 13.3333 6.66667 11.8417 6.66667 10C6.66667 8.15833 8.15833 6.66667 10 6.66667C11.8417 6.66667 13.3333 8.15833 13.3333 10C13.3333 11.8417 11.8417 13.3333 10 13.3333ZM16.5383 4.6625C16.5383 5.325 16 5.8625 15.3383 5.8625C14.6758 5.8625 14.1383 5.32417 14.1383 4.6625C14.1383 4.00083 14.6767 3.46333 15.3383 3.46333C15.9992 3.4625 16.5383 4.00083 16.5383 4.6625Z" fill="black"/>
+        </svg>
+
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.00132 0.666016C13.6038 0.666016 17.3346 4.39685 17.3346 8.99935C17.3346 13.6018 13.6038 17.3327 9.00132 17.3327C7.52861 17.3352 6.0818 16.9455 4.80965 16.2035L0.671315 17.3327L1.79798 13.1927C1.05545 11.9201 0.665401 10.4727 0.667981 8.99935C0.667981 4.39685 4.39882 0.666016 9.00132 0.666016ZM6.16131 5.08268L5.99465 5.08935C5.88689 5.09677 5.7816 5.12508 5.68465 5.17268C5.59429 5.22394 5.51178 5.28793 5.43965 5.36268C5.33965 5.45685 5.28298 5.53852 5.22215 5.61768C4.91392 6.01843 4.74796 6.51044 4.75048 7.01602C4.75215 7.42435 4.85881 7.82185 5.02548 8.19352C5.36631 8.94518 5.92715 9.74102 6.66715 10.4785C6.84548 10.656 7.02048 10.8343 7.20882 11.0002C8.12834 11.8097 9.22405 12.3935 10.4088 12.7052L10.8821 12.7777C11.0363 12.786 11.1905 12.7743 11.3455 12.7668C11.5881 12.7541 11.8251 12.6884 12.0396 12.5743C12.1487 12.518 12.2552 12.4568 12.3588 12.391C12.3588 12.391 12.3941 12.3671 12.463 12.316C12.5755 12.2327 12.6446 12.1735 12.738 12.076C12.808 12.0038 12.8663 11.9199 12.913 11.8243C12.978 11.6885 13.043 11.4293 13.0696 11.2135C13.0896 11.0485 13.0838 10.9585 13.0813 10.9027C13.078 10.8135 13.0038 10.721 12.923 10.6818L12.438 10.4643C12.438 10.4643 11.713 10.1485 11.2696 9.94685C11.2232 9.92665 11.1735 9.91507 11.123 9.91268C11.066 9.90672 11.0083 9.91308 10.954 9.93134C10.8996 9.9496 10.8498 9.97933 10.808 10.0185C10.8038 10.0168 10.748 10.0643 10.1455 10.7943C10.1109 10.8408 10.0633 10.8759 10.0087 10.8952C9.95403 10.9145 9.89491 10.9171 9.83881 10.9027C9.7845 10.8882 9.73131 10.8698 9.67965 10.8477C9.57631 10.8043 9.54048 10.7877 9.46965 10.7577C8.99121 10.5493 8.54835 10.2672 8.15715 9.92185C8.05215 9.83018 7.95465 9.73018 7.85465 9.63352C7.52682 9.31952 7.24111 8.96434 7.00465 8.57685L6.95548 8.49768C6.9207 8.44418 6.89218 8.38686 6.87048 8.32685C6.83881 8.20435 6.92131 8.10602 6.92131 8.10602C6.92131 8.10602 7.12381 7.88435 7.21798 7.76435C7.30965 7.64768 7.38715 7.53435 7.43715 7.45352C7.53548 7.29518 7.56632 7.13268 7.51465 7.00685C7.28132 6.43685 7.0402 5.8699 6.79131 5.30602C6.74215 5.19435 6.59631 5.11435 6.46382 5.09852C6.41882 5.09296 6.37381 5.08852 6.32881 5.08518C6.21692 5.07876 6.10472 5.07988 5.99298 5.08852L6.16131 5.08268Z" fill="black"/>
+        </svg>
+    </footer>
+
+    <script>
+        // Captura o formulário de login e faz o envio via AJAX
+        const loginForm = document.getElementById('loginForm');
+        const messageElement = document.getElementById('message'); // Definir o elemento de mensagem de erro
+        const cadastroBtn = document.getElementById("cadastrobtn");
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+    
+            const email = loginForm.querySelector('input[type="text"]').value;
+            const password = loginForm.querySelector('input[type="password"]').value;
+    
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password }),
+                });
+    
+                const data = await response.json(); // A resposta JSON já foi lida aqui
+    
+                if (response.ok) {
+                    // Login bem-sucedido
+                    alert(`Bem-vindo, ${data.name}!`);
+                    window.location.href = data.redirect; // Redireciona para a página de curso
+                } else {
+                    // Mensagem de erro
+                    messageElement.textContent = data.message;
+                    messageElement.style.color = 'red';
+                    messageElement.style.textAlign = 'center';
+                    messageElement.style.marginTop = '30px'; // Ajusta a posição para baixo
+                }
+            } catch (error) {
+                console.error('Erro ao fazer login:', error);
+                messageElement.textContent = 'Erro ao tentar fazer login';
+                messageElement.style.color = 'red';
+                messageElement.style.textAlign = 'center';
+                messageElement.style.marginTop = '30px'; // Ajusta a posição para baixo
+            }
+        });
+        // Adiciona um evento de clique ao botão
+        cadastroBtn.addEventListener("click", () => {
+            // Redireciona para a página de cadastro
+            window.location.href = "cadastro.html";
+        });
+    </script>    
+</body>
+</html>

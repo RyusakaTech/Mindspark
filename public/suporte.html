@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=PzHIf403jc5d6ja_n-00l1PBRpKMIqcIldYogKK23u0g_gtnOGE3oH0nxtwc5xbW5LFj6y791VyIpAGX6z4Jm-_g6eP8BFNKbx0RsznmDasMln4vDs8xwplHAxEAxJnYLnugNPw_w1Rg_VrOSRl0ivu9BZKBqPwnu8TzNt0ra-R9xlB5ZNtAdqyD_tyn2UGGLzSlStoINAfq1Y4gEvqDvasQp-keARf2GIsVj1B7kFUE-CwQ1DoE-kWeK3BoZQLqvkud61pGnt3Q_cnOIgC9Rw" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXR0YWNobWVudHMvMTI4ODkyNDM1MDQ4MDkxMjQ2MC8xMzA1NzM4MTQ4NTY2OTI5NDA4L3N1cG9ydGUuaHRtbD9leD02NzM0YzdhYSZpcz02NzMzNzYyYSZobT1lMGMwOGVmYjFjNzA4MjdhMTMxZjA3N2FiYmFjZTY1ZDM4ODllMWE5NDg4MDczYzNlM2QyMzIzYzcwNDk0Y2ZjJg"/><script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+    <title>MindSpark</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                mindspark: '#ACC7EA',
+                darkmode: '#5b4e68',
+                lightmode: '#f2f1f3',
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+        .num {
+            font-family: 'Arial', sans-serif; 
+        }
+
+        body {
+            background-color: #BABABA; /* Cor de fundo alterada para #BABABA */
+        }
+
+        footer p {
+            margin-right: 10px;
+        }
+
+        footer img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .content {
+            margin-bottom: 50px; /* Garante que o footer não fique colado ao conteúdo */
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden; /* Impede que o conteúdo ultrapasse os limites da imagem */
+        }
+
+        .image-container img {
+            width: 100%; /* A imagem ocupa a largura completa do contêiner */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+        /* Ajuste para o texto sobre a imagem */
+        .image-text {
+            position: absolute;
+            top: 6.5%; /* Ajustado para ficar mais próximo do topo da imagem */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+            z-index: 10; /* Garante que o texto fique acima da imagem */
+            box-sizing: border-box; /* Garante que o texto não ultrapasse os limites da imagem */
+        }
+
+        /* Formulário posicionado imediatamente abaixo da imagem */
+        .form-container {
+            padding: 20px;
+            background-color: #f2f1f3;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -30px; /* Ajuste para deixar o formulário colado com a imagem */
+        }
+
+        /* Linha preta entre o cabeçalho e o rodapé */
+        nav {
+            border-bottom: 2px solid black; /* Linha preta abaixo do cabeçalho */
+        }
+
+        footer {
+            border-top: 2px solid black; /* Linha preta acima do rodapé */
+        }
+    </style>
+</head>
+<body>
+    <nav class="bg-mindspark p-2 flex justify-between items-center m-0">
+        <div class="flex justify-between items-center">
+            <a href="/index.html">
+                <img src="assets/Logo.png" alt="Logo MindSpark" width="40" height="40"> <!-- Logo -->
+            </a>
+            <h1 class="ml-2 font-bold">MindSpark</h1>
+        </div>
+
+        <div class="navbar">
+            <a class="mr-2 text-black hover:text-gray-500" href="/ticket" aria-label="Navegar para Ticket">Ticket</a>
+            <a class="mx-2 text-black hover:text-gray-500" href="/curso" aria-label="Navegar para curso">Curso</a>
+        </div>
+    </nav>
+
+    <!-- Contêiner centralizado para imagem e formulário -->
+    
+    <div class="content">
+        <div class="relative flex flex-col items-center mt-10 max-w-xl mx-auto">
+            <!-- Contêiner da imagem e do texto -->
+            <div class="image-container">
+                <!-- Imagem -->
+                <img src="/assets/imagemsuporte.png" alt="Imagem Descrição" class="w-full h-auto mt-6"> <!-- Imagem responsiva -->
+                
+                <!-- Texto sobre a imagem -->
+                <div class="image-text">
+                    <p class="text-white text-xl md:text-2xl font-bold">
+                        Problemas com o site? Contate-nos agora mesmo!
+                    </p>
+                </div>
+            </div>
+            <div class="form-container">
+                <form id="supportForm" enctype="multipart/form-data">
+                    <label for="name" class="block mb-2">Nome:</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Digite seu nome" required>
+
+                    <label for="email" class="block mb-2">E-mail:</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Digite seu e-mail" required>
+
+                    <label for="celular" class="block mb-2">Celular:</label>
+                    <input type="tel" id="celular" name="celular" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Digite seu celular" required>
+
+                    <label for="problema" class="block mb-2">Problema:</label>
+                    <textarea id="problema" name="problema" rows="4" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Descreva o problema" required></textarea>
+
+                    <div class="flex justify-start mb-4">
+                        <label class="mr-4">
+                            <input type="radio" name="vce" value="aluno" required> Aluno(a)
+                        </label>
+                        <label>
+                            <input type="radio" name="vce" value="professor" required> Professor(a)
+                        </label>
+                    </div>
+
+                    <input type="file" id="photo" name="photo" class="mb-4">
+
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Enviar</button>
+                </form>
+                <p id="statusMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-mindspark p-2 flex justify-start items-center gap-4 self-baseline">
+        <p class="text-black hover:text-gray-500">(c) Todos os direitos reservados</p>
+    
+        <div class="flex gap-4 ml-auto">
+            <!-- Instagram Image -->
+            <a href="https://www.instagram.com/MindSpark" target="_blank" aria-label="Instagram" class="text-black hover:text-gray-500">
+                <img src="/assets/Instagram.png" alt="Instagram" class="w-6 h-6">
+            </a>
+    
+            <!-- WhatsApp Image -->
+            <a href="https://wa.me/55seunumerodetelefone" target="_blank" aria-label="WhatsApp" class="text-black hover:text-gray-500">
+                <img src="/assets/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('supportForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(document.getElementById('supportForm'));
+            const statusMessage = document.getElementById('statusMessage');
+
+            try {
+                const response = await fetch('/enviar-suporte', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                statusMessage.innerText = result.message;
+
+                if (response.ok) {
+                    statusMessage.style.color = 'green';
+                } else {
+                    statusMessage.style.color = 'red';
+                }
+            } catch (error) {
+                statusMessage.innerText = 'Erro ao enviar a mensagem de suporte.';
+                statusMessage.style.color = 'red';
+                console.error('Erro:', error);
+            }
+        });
+    </script>
+</body>
+</html>

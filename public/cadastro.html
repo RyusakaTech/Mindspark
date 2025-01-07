@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Registrar na MindSpark</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mindspark: '#ACC7EA',
+                        darkmode: '#5b4e68',
+                        lightmode: '#f2f1f3',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+        .num {
+            font-family: 'Arial', sans-serif; /* Fonte para números */
+        }
+    </style>
+</head>
+<body class="bg-lightmode min-h-screen flex flex-col justify-between">
+
+    <!-- CABEÇALHO -->
+    <nav class="bg-mindspark p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="assets/Logo.png" alt="Logo MindSpark" class="w-10 h-10">
+            <h1 class="ml-3 font-bold text-lg">MindSpark</h1>
+        </div>
+        <div>
+            <a href="/suporte" class="mr-4 text-darkmode">Como funciona</a>
+            <a href="/curso" class="text-darkmode">Curso</a>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO CENTRAL -->
+    <main class="flex-grow flex flex-col items-center justify-center p-6">
+        <!-- FRASE MOTIVACIONAL -->
+        <div class="bg-darkmode text-white text-center p-6 m-4 rounded-lg">
+            <p>"O primeiro passo para o sucesso é acreditar em si mesmo."</p>
+        </div>
+
+        <!-- FORMULÁRIO DE CADASTRO -->
+        <section class="bg-white p-6 rounded-lg shadow-md w-full max-w-lg">
+            <h2 class="text-xl font-bold text-center mb-6">Cadastro</h2>
+            <form id="registrationForm" method="POST" action="/cadastro" class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="nome" class="block">Nome:</label>
+                        <input id="nome" name="nome" type="text" class="w-full h-10 rounded-lg border p-3" required>
+                    </div>
+                    <div>
+                        <label for="sobrenome" class="block">Sobrenome:</label>
+                        <input id="sobrenome" name="sobrenome" type="text" class="w-full h-10 rounded-lg border p-3" required>
+                    </div>
+                    <div>
+                        <label for="dataNascimento" class="block">Data de nascimento:</label>
+                        <input id="dataNascimento" name="dataNascimento" type="text" class="w-full h-10 rounded-lg border p-3" required>
+                    </div>
+                    <div>
+                        <label for="escolaridade" class="block">Grau de escolaridade:</label>
+                        <input id="escolaridade" name="escolaridade" type="text" class="w-full h-10 rounded-lg border p-3" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block">Email:</label>
+                        <input id="email" name="email" type="email" class="w-full h-10 rounded-lg border p-3" required>
+                    </div>
+                    <div>
+                        <label for="senha" class="block">Senha:</label>
+                        <input id="senha" name="senha" type="password" class="w-full h-10 rounded-lg border p-3" required>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6">
+                    <button type="submit" id="button" class="bg-mindspark py-2 px-6 rounded-lg text-white shadow-md">
+                        Registrar
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-mindspark p-4 flex justify-center items-center">
+        <p>(c) Todos os direitos reservados - MindSpark</p>
+    </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+
+            const response = await fetch('/cadastro', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                nome: formData.get('nome'),
+                sobrenome: formData.get('sobrenome'),
+                data_nasci: formData.get('dataNascimento'),
+                escolaridade: formData.get('escolaridade'),
+                email: formData.get('email'),
+                senha: formData.get('senha'),
+            }),
+        });
+
+
+            const result = await response.json();
+            if (response.ok) {
+                alert(result.message);
+                window.location.href = result.redirect;
+            } else {
+                alert(result.error || 'Senha contém menos de 6 caracteres');
+            }
+        });
+    </script>
+</body>
+</html>
